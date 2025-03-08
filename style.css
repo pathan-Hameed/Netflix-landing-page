@@ -22,13 +22,15 @@ body {
 }
 
 main {
+  margin-top: 0;
+  padding-top: 0;
   margin-bottom: 3rem;
   padding: 0 5%;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between; /* Full viewport height */
+  justify-content: flex-start; /* Full viewport height */
   color: white; /* Ensures text is visible */
   z-index: 1; /* Keep content above background */
   /* border: 1px solid white; */
@@ -61,23 +63,42 @@ nav ul {
   list-style: none;
 }
 
+nav ul li {
+  position: relative;
+  /* border: 1px solid white; */
+  margin: 0;
+  padding: 0;
+}
+
 #lang {
   padding: 0 10%;
   width: 3rem;
   font-size: 14px;
   height: 1.5rem;
-  background-color: black;
+  background: transparent;
+  color: white;
+  /* background-color: black; */
   border: 1px solid rgb(188, 188, 188);
   border-radius: 5px;
   option {
     font-size: 11px;
+    color: #000;
+    text-align: center;
   }
+}
+
+.bi-translate {
+  position: absolute;
+  top: 0.3rem;
+  left: 10px;
+  color: white;
 }
 
 .nav-sgn-in {
   height: 1.5rem;
   width: fit-content;
   padding: 0 20px;
+  text-wrap: nowrap;
   font-size: 11px;
   border: none;
   background: red;
@@ -94,7 +115,7 @@ nav ul {
   flex-direction: column;
   justify-content: center;
   padding: 0 3rem;
-  margin-bottom: 6rem;
+  margin-top: 12rem;
   width: fit-content;
   color: white;
   position: relative;
@@ -109,7 +130,7 @@ nav ul {
 .heading {
   /* text-align: center; */
   font-weight: 900;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .subheading {
@@ -135,7 +156,7 @@ nav ul {
   font-size: 14px;
   padding: 0 10px;
   width: 100%;
-  background: #000;
+  background: transparent;
   border: 1px solid green;
 }
 
@@ -151,6 +172,7 @@ nav ul {
   flex-wrap: nowrap;
   gap: 10px;
   text-align: center;
+  text-wrap: nowrap;
   font-family: Arial;
   font-size: 14px;
   font-weight: 500;
@@ -384,17 +406,21 @@ footer a {
 }
 
 .language {
+  list-style: none;
+  margin: 0; 
+  padding: 0;
+}
+
+.li {
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-wrap: nowrap;
+  align-items: center;
+  position: relative;
+  /* border: 1px solid white; */
   margin: 2rem 0;
-  font-size: 14px;
-  width: 8rem;
-  height: 2rem;
-  background-color: black;
-  border: 1px solid white;
-  border-radius: 5px;
+  margin-bottom: 3rem;
+  width: fit-content;
+  height: fit-content;
 }
 
 .copyrights {
@@ -411,7 +437,12 @@ footer a {
 
   #lang {
     height: 2rem;
-    width: 7rem;
+    width: 8rem;
+    padding: 0 10%;
+  }
+
+  .bi-translate {
+    top: 0.4rem;
   }
 
   .nav-sgn-in {
@@ -423,18 +454,12 @@ footer a {
     padding: 0 4rem;
   }
 
-  main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
   .hero-section {
     /* justify-self: center; */
     align-items: center;
     padding: 0 15%;
     font-size: 18px;
-    margin-bottom: 6rem;
+    margin-top: 20rem;
   }
 
   .hero-section p {
@@ -445,7 +470,7 @@ footer a {
   .heading {
     /* text-align: center; */
     font-weight: 900;
-    font-size: 34px;
+    font-size: 42px;
   }
 
   .subheading {
@@ -577,7 +602,12 @@ footer a {
 
   #lang {
     height: 2rem;
-    width: 7rem;
+    width: 8rem;
+    padding: 0 15%;
+  }
+
+  .bi-translate {
+    top: 0.4rem;
   }
 
   .nav-sgn-in {
@@ -589,27 +619,20 @@ footer a {
     padding: 0 7rem;
   }
 
-  main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: 6rem;
-  }
-
   .hero-section {
     /* justify-self: center; */
     align-items: center;
     padding: 0 14rem;
-    margin-bottom: 8rem;
+    margin-top: 8rem;
     color: rgb(206, 206, 206);
     /* border: 1px solid white; */
   }
-  
+
   .hero-section p {
     margin: 3;
     font-size: 14px;
   }
-  
+
   .heading {
     /* text-align: center; */
     font-weight: 900;
@@ -617,7 +640,7 @@ footer a {
     margin: 0;
     color: white;
   }
-  
+
   .subheading {
     font-size: 18px;
     font-weight: 600;
@@ -698,7 +721,6 @@ footer a {
 
   .list-of-questions li {
     height: 5rem;
-
   }
 
   .text {
